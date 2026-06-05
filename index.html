@@ -3,79 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Accessible Personal Portfolio">
-<title>Portfolio - Home</title>
+<title>Portfolio Home</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<h1>My Portfolio</h1>
-<header>
-<nav aria-label="Main Navigation">
 
-<button id="themeToggle">🌙</button>
+<header>
+<nav>
+<h1>Portfolio</h1>
+
 <ul>
 <li><a href="index.html">Home</a></li>
 <li><a href="about.html">About</a></li>
 <li><a href="projects.html">Projects</a></li>
 <li><a href="contact.html">Contact</a></li>
 </ul>
-
 </nav>
 </header>
 
 <main>
-  
+
 <section class="hero">
-<div class="hero-content">
-<h2>Welcome To My Portfolio</h2>
+
+<div class="hero-text">
+<h2>Creative Web Developer</h2>
 
 <p>
-Frontend Developer creating accessible,
-responsive and modern web experiences.
+Building beautiful, responsive, and accessible
+web experiences using modern technologies.
 </p>
 
-<a href="projects.html" class="btn">View Projects</a>
-<a href="contact.html" class="btn">Contact Me</a>
+<a href="projects.html" class="btn">Explore Work</a>
+
 </div>
-</section>
-
-<section class="hero">
-
-<h2>Welcome To My Portfolio</h2>
-
-<p>
-Frontend Developer passionate about creating
-accessible and user-friendly web applications.
-</p>
-
-<a href="projects.html" class="btn">View Projects</a>
-<a href="contact.html" class="btn">Hire Me</a>
 
 </section>
 
 </main>
 
 <footer>
-<p>&copy; 2026 My Portfolio</p>
+<p>© 2026 Portfolio Website</p>
 </footer>
-
-<script>
-const btn = document.getElementById("themeToggle");
-
-btn.onclick = () => {
-    const current = document.body.getAttribute("data-theme");
-
-    if(current === "dark"){
-        document.body.removeAttribute("data-theme");
-        btn.innerHTML = "🌙";
-    }
-    else{
-        document.body.setAttribute("data-theme","dark");
-        btn.innerHTML = "☀️";
-    }
-};
-</script>
 
 </body>
 </html>

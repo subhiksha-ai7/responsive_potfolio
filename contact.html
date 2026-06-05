@@ -3,29 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Contact Me">
 <title>Contact</title>
-
 <link rel="stylesheet" href="style.css">
-
-<style>
-#successMsg{
-    margin-top:15px;
-    text-align:center;
-    font-size:16px;
-    font-weight:bold;
-    color:green;
-}
-</style>
-
 </head>
 
 <body>
-<h1>My Portfolio</h1>
+
 <header>
-<nav aria-label="Main Navigation">
-
-
+<nav>
+<h1>Portfolio</h1>
 
 <ul>
 <li><a href="index.html">Home</a></li>
@@ -33,67 +19,42 @@
 <li><a href="projects.html">Projects</a></li>
 <li><a href="contact.html">Contact</a></li>
 </ul>
-
 </nav>
 </header>
 
-<main>
-
-<section class="page">
+<section class="container">
 
 <h2>Contact Me</h2>
 
-<form aria-label="Contact Form" onsubmit="showMessage(event)">
+<form onsubmit="sendMessage(event)">
 
-<label for="name">Name</label>
-<input
-type="text"
-id="name"
-name="name"
-required
-aria-required="true">
+<input type="text" placeholder="Your Name" required>
 
-<label for="email">Email</label>
-<input
-type="email"
-id="email"
-name="email"
-required
-aria-required="true">
+<input type="email" placeholder="Your Email" required>
 
-<label for="message">Message</label>
-<textarea
-id="message"
-name="message"
-rows="5"
-required
-aria-required="true"></textarea>
+<textarea rows="5"
+placeholder="Your Message"
+required></textarea>
 
-<button type="submit">
-Send Message
-</button>
+<button type="submit">Send Message</button>
 
-<p id="successMsg"></p>
+<p id="msg"></p>
 
 </form>
 
 </section>
 
-</main>
-
 <footer>
-<p>&copy; 2026 My Portfolio. All Rights Reserved.</p>
+<p>© 2026 Portfolio Website</p>
 </footer>
 
 <script>
-function showMessage(event)
+function sendMessage(event)
 {
-    event.preventDefault();
+event.preventDefault();
 
-    document.getElementById("successMsg").innerHTML =
-    "✅ Message Sent Successfully!";
-
-    document.querySelector("form").reset();
+document.getElementById("msg").innerHTML=
+"✅ Message Sent Successfully!";
 }
 </script>
 

@@ -11,7 +11,7 @@ color:#333;
 }
 
 header{
-background:pink;
+background:rgb(59, 0, 59);
 padding:20px;
 }
 
@@ -127,7 +127,7 @@ text-align:center;
 }
 
 footer{
-background:#5b21b6;
+background:rgb(59, 0, 59);
 color:white;
 text-align:center;
 padding:15px;

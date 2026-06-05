@@ -1,0 +1,286 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root{
+    --primary:#6366f1;
+    --secondary:#8b5cf6;
+    --accent:#06b6d4;
+
+    --bg:#f8fafc;
+    --card:#ffffff;
+    --text:#0f172a;
+    --muted:#64748b;
+
+    --shadow:0 10px 30px rgba(0,0,0,.1);
+
+    --radius:20px;
+
+    --transition:.4s ease;
+}
+
+.dark-mode{
+    --bg:#0f172a;
+    --card:#1e293b;
+    --text:#f8fafc;
+    --muted:#94a3b8;
+    --shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    transition:var(--transition);
+    line-height:1.7;
+}
+
+
+
+.container{
+    width:min(1200px,90%);
+    margin:auto;
+}
+
+
+
+header{
+    position:sticky;
+    top:0;
+    z-index:999;
+    backdrop-filter:blur(15px);
+    background:rgba(255,255,255,.1);
+    border-bottom:1px solid rgba(255,255,255,.2);
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:1rem 0;
+}
+
+.logo{
+    font-size:1.8rem;
+    font-weight:700;
+    color:var(--primary);
+}
+
+.nav-links{
+    display:flex;
+    gap:2rem;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:var(--text);
+    font-weight:500;
+    transition:var(--transition);
+}
+
+.nav-links a:hover{
+    color:var(--primary);
+}
+
+
+.hero{
+    min-height:100vh;
+
+    display:grid;
+    grid-template-columns:1fr;
+    gap:3rem;
+
+    align-items:center;
+}
+
+.hero-content h1{
+    font-size:clamp(2.5rem,6vw,5rem);
+    line-height:1.2;
+}
+
+.hero-content span{
+    color:var(--primary);
+}
+
+.hero-content p{
+    margin:1.5rem 0;
+    color:var(--muted);
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:1rem;
+}
+
+.btn{
+    padding:.9rem 2rem;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    text-decoration:none;
+    transition:var(--transition);
+}
+
+.btn-primary{
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+    color:white;
+}
+
+.btn-primary:hover{
+    transform:translateY(-4px);
+}
+
+.btn-outline{
+    border:2px solid var(--primary);
+    color:var(--primary);
+}
+
+
+.hero-image{
+    display:flex;
+    justify-content:center;
+}
+
+.hero-image img{
+    width:320px;
+    border-radius:50%;
+    border:5px solid var(--primary);
+
+    box-shadow:
+    0 0 40px rgba(99,102,241,.5);
+}
+
+.grid-layout{
+    display:grid;
+    gap:2rem;
+}
+
+.projects-grid{
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+}
+
+
+.card{
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(15px);
+
+    border-radius:var(--radius);
+    padding:2rem;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+}
+
+.card:hover{
+    transform:
+    translateY(-10px);
+}
+
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:1rem;
+}
+
+.skill{
+    background:var(--primary);
+    color:white;
+    padding:.6rem 1rem;
+    border-radius:30px;
+}
+
+
+.project-card img{
+    width:100%;
+    border-radius:15px;
+}
+
+.project-card h3{
+    margin:1rem 0;
+}
+
+
+.contact-form{
+    display:grid;
+    gap:1rem;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:1rem;
+
+    border:none;
+    border-radius:10px;
+
+    background:var(--card);
+
+    color:var(--text);
+
+    box-shadow:var(--shadow);
+}
+
+.contact-form button{
+    width:fit-content;
+}
+
+
+footer{
+    text-align:center;
+    padding:2rem;
+    margin-top:5rem;
+}
+
+
+@keyframes float{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+
+.hero-image img{
+    animation:float 4s ease-in-out infinite;
+}
+
+
+@media (min-width:768px){
+
+    .hero{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+}
+
+@media (min-width:1024px){
+
+    .hero-content h1{
+        font-size:5rem;
+    }
+
+}

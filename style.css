@@ -11,7 +11,7 @@ color:#333;
 }
 
 header{
-background:green;
+background:pink;
 padding:20px;
 }
 
@@ -20,7 +20,6 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 flex-wrap:wrap;
-background-color:bisque;
 }
 
 nav h1{

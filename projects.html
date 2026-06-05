@@ -1,89 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Projects</title>
-
-<link rel="stylesheet" href="css/style.css">
-
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
+<h1>My Portfolio</h1>
 <header>
-<div class="container navbar">
+<nav>
 
-<h2 class="logo">Portfolio</h2>
 
-<nav aria-label="Main Navigation">
-<ul class="nav-links">
+<ul>
 <li><a href="index.html">Home</a></li>
 <li><a href="about.html">About</a></li>
-<li><a href="projects.html" aria-current="page">Projects</a></li>
+<li><a href="projects.html">Projects</a></li>
 <li><a href="contact.html">Contact</a></li>
 </ul>
+
 </nav>
-
-<button
-id="theme-toggle"
-class="btn btn-primary">
-🌙
-</button>
-
-</div>
 </header>
 
-<main class="container">
+<main>
 
-<section style="padding:100px 0;">
+<section class="page">
 
-<h1>Projects</h1>
+<h2>Projects</h2>
 
-<br>
+<div class="grid">
 
-<div class="grid-layout projects-grid">
-
-<div class="card project-card">
-<img
-src="https://picsum.photos/500/300?1"
-alt="Portfolio Project">
-
+<article class="card">
 <h3>Portfolio Website</h3>
+<p>Responsive portfolio using HTML5 and CSS3.</p>
+</article>
 
-<p>
-Modern responsive portfolio using HTML,
-CSS Grid and JavaScript.
-</p>
-</div>
+<article class="card">
+<h3>Calculator App</h3>
+<p>Interactive calculator using JavaScript.</p>
+</article>
 
-<div class="card project-card">
-<img
-src="https://picsum.photos/500/300?2"
-alt="E-Commerce Project">
-
-<h3>E-Commerce UI</h3>
-
-<p>
-Responsive online shopping interface
-with modern design patterns.
-</p>
-</div>
-
-<div class="card project-card">
-<img
-src="https://picsum.photos/500/300?3"
-alt="Dashboard Project">
-
-<h3>Analytics Dashboard</h3>
-
-<p>
-Interactive dashboard with cards,
-charts and responsive layouts.
-</p>
-</div>
+<article class="card">
+<h3>Student Management System</h3>
+<p>Record management application.</p>
+</article>
 
 </div>
 
@@ -92,10 +53,8 @@ charts and responsive layouts.
 </main>
 
 <footer>
-<p>&copy; 2026 John Doe</p>
+<p>&copy; 2026 My Portfolio</p>
 </footer>
-
-<script src="js/script.js"></script>
 
 </body>
 </html>
